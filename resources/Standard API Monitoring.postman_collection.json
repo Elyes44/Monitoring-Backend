@@ -1,0 +1,2330 @@
+{
+	"info": {
+		"_postman_id": "5533a1ff-4839-4d3b-b3d1-e0cdc2809383",
+		"name": "Standard API Monitoring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Auth kiosk",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"payout\",\n    \"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/kiosk/auth/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"kiosk",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"user001\",\n    \"password\":\"user001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/user/auth/signin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3Y2VkZTY3MC0wODM4LTExZWQtYWM5MC02NTU0YzZmNTgyYzQiLCJpZCI6ImE1YTJhYTQ4LTJmNmItNGUxNy1iNTFhLWE5ZmZhOTQ5NTE2OCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTgzMjc0MjIsImV4cCI6MTY1ODQxMzgyMn0.paAKxybymbcxo6K4RBktsXIw0-YGloKFqYG8rOI5NqM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/user/auth/signout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Kiosk",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0M2NjN2VkLTkwNzYtNGRlYi04NmNiLWFhMmEzYmYxZWQyZSIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTU5MTE1NTcsImV4cCI6MTY1NTk5Nzk1N30.3wVKC80OX7bRjOWos4FrOdKtQ3FAZiIcZq5g6HCYbN0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"cashout\",\n    \"status\": \"works\",\n    \"address\": \"sousse\",\n    \"username\": \"gafsseddiltf\",\n    \"password\": \"9876543\",\n    \"position\": [\n        11.5,\n        11.6\n    ],\n    \"userid\": \"7e41952c-bd64-4e89-a8d5-0afbcf62147e\",\n    \"enable\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/kiosk/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwOWQwNzU1MC0xNGM2LTExZWQtYWI1Yy0xNTMyZDMwNzI4MzEiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk3MDc2MzEsImV4cCI6MTY1OTc5NDAzMX0.H9sJLZ0RcrM4prTqdFTVrIE-PPcPFZYWNf9zmpvYdQo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZlMWJmM2NkLTM0ZjEtNGQyNi04ZmE5LTQ5ZDAwZjc2NmY0NiIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTU4MjkyMjgsImV4cCI6MTY1NTkxNTYyOH0.14Oijn2DwnltWKY6HtmPBMoV8Sjl0aGMEq2YEDTtZgg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/get?page=0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZhMzM1MzhlLWY1YmItNDEzMy1hMDNhLTU2ZWNmYTAzMjdmZSIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTUxMjY1NjgsImV4cCI6MTY1NTIxMjk2OH0.2K-c6XUIPZ0QG68zGwcndar7MTYCjguKyDlEy4zqsOA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/get/f049bce2-9fdc-411b-89be-5357c3a6d8b6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"get",
+										"f049bce2-9fdc-411b-89be-5357c3a6d8b6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"cashout\",\n    \"status\": \"works\",\n    \"address\": \"sousse\",\n      \"username\": \"gafssiltf\",\n    \"password\": \"9876543\",\n    \"position\": [11.5,11.6],\n    \"userid\":\"8e20fffa-af5b-4874-ba34-ac9f1d2e624e\",\n    \"enable\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/kiosk/update/541d88ce-736b-451a-95fd-a86f22c57de8",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"update",
+										"541d88ce-736b-451a-95fd-a86f22c57de8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/delete/541d88ce-736b-451a-95fd-a86f22c57de8",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"delete",
+										"541d88ce-736b-451a-95fd-a86f22c57de8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/deleteall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"deleteall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Small",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc3OTM5NTUsImV4cCI6MTY1Nzg4MDM1NX0.ulnyFEQbFYT4bREgAui-QK7cFofxHN5ay70kH2bIG-A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/findallsmall?enable=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"findallsmall"
+									],
+									"query": [
+										{
+											"key": "enable",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get nb kiosk",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY5MjI0MzksImV4cCI6MTY1NzAwODgzOX0.8LLklGIpancoj01xTa7VHyOUnh4GbGwgsOuaQnOVh90",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/getnbkiosk",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"getnbkiosk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chnage power",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc3OTM5NTUsImV4cCI6MTY1Nzg4MDM1NX0.ulnyFEQbFYT4bREgAui-QK7cFofxHN5ay70kH2bIG-A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"enable\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/kiosk/changerpower/f8f6327b-90ae-492d-a0f5-6368dd9f1021",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"changerpower",
+										"f8f6327b-90ae-492d-a0f5-6368dd9f1021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by Responsable",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBiOWM5N2IwLTVmZjctNGYwZi1hOGVkLTdmZjZhOGQ2YTY5YiIsIm5hbWUiOiJNb2hhbWVkIGJlbmtobGlmYSIsImlhdCI6MTY1ODEzMjUzMSwiZXhwIjoxNjU4MjE4OTMxfQ.s6zppnGGBSVwIM08tGLB7DRSnA2TVTl1VrJPRWa_Yl4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/getbyresp",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"getbyresp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Device",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzM2Q5ZGJkLWE5NTEtNGZkYy04ZWQxLWNmOTdjNmRhNjkxOCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTgxNDMxNzksImV4cCI6MTY1ODIyOTU3OX0.mhNaniEUKo6nyVRJjvqeoQyYJ17tpjkpX-dzK1TXyQM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\":\"my300j\",\n    \"status\":\"works\",\n    \"name\":\"my205t\",\n    \"dtype\":\"coinsacceptor\",\n    \"kioskid\":\"ba05ab49-f65b-425d-ae11-4231cdd61047\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/device/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyNDI5ZGQ4MC0xNGFiLTExZWQtYWI1Yy0xNTMyZDMwNzI4MzEiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk2OTYwNzksImV4cCI6MTY1OTc4MjQ3OX0.4Hyjaag5AK7V5GqfB_2jmBrGAQXHXM2DpVCWYXDZBC4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/device/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/device/get?page=0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0M2NjN2VkLTkwNzYtNGRlYi04NmNiLWFhMmEzYmYxZWQyZSIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTU5MTE1NTcsImV4cCI6MTY1NTk5Nzk1N30.3wVKC80OX7bRjOWos4FrOdKtQ3FAZiIcZq5g6HCYbN0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/device/get/59c8ebe7-ac6a-481a-a459-4d5e213d2f99",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"get",
+										"59c8ebe7-ac6a-481a-a459-4d5e213d2f99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"reference\":\"Nv202369f\",\n    \"status\":\"works\",\n    \"kioskid\":\"541d88ce-736b-451a-95fd-a86f22c57de8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/device/update/59638f77-e583-4643-86a8-375f8d7b811d",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"update",
+										"59638f77-e583-4643-86a8-375f8d7b811d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/device/delete/59638f77-e583-4643-86a8-375f8d7b811d",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"device",
+										"delete",
+										"59638f77-e583-4643-86a8-375f8d7b811d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc3OTM5NTUsImV4cCI6MTY1Nzg4MDM1NX0.ulnyFEQbFYT4bREgAui-QK7cFofxHN5ay70kH2bIG-A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstname\": \"abdd\",\n    \"lastname\": \"elhalim\",\n    \"email\": \"halim.abd@gamil.com\",\n    \"address\": \"tunis\",\n    \"username\": \"abdhalim\",\n    \"password\": \"abdhalim\",\n    \"telephone\":95936529,\n    \"enable\":1,\n    \"roles\": [\"responible\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/user/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjZmIxMTJiMC0xM2ZmLTExZWQtOWJjMC0yYjc2OWY0OWE5YzYiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk2MjI0OTQsImV4cCI6MTY1OTcwODg5NH0.vpWfinac7xSU3ONHS-KVlZwIX68Md-LHECJriDwzJFA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTYzMjkzNjYsImV4cCI6MTY1NjQxNTc2Nn0.nhImaSkz3-Uh9sAG5MfJMhFNwMIhWV-GmCCjAw6j7is",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/get?enable=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"get"
+									],
+									"query": [
+										{
+											"key": "enable",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZhMzM1MzhlLWY1YmItNDEzMy1hMDNhLTU2ZWNmYTAzMjdmZSIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTUxMjY1NjgsImV4cCI6MTY1NTIxMjk2OH0.2K-c6XUIPZ0QG68zGwcndar7MTYCjguKyDlEy4zqsOA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/get/fa33538e-f5bb-4133-a03a-56ecfa0327fe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"get",
+										"fa33538e-f5bb-4133-a03a-56ecfa0327fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstname\": \"latifa\",\n    \"lastname\": \"gafssi\",\n    \"email\": \"ltfgafssi@gmail.com\",\n    \"address\": \"gafssa\",\n    \"username\": \"ltfgafssi\",\n    \"password\": \"9876543\",\n    \"telephone\":95932829,\n    \"enable\":0,\n    \"roles\": [\"admin\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/user/update/e2494fc4-2e85-41f8-b00d-eb45b2c5cbaa",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update",
+										"e2494fc4-2e85-41f8-b00d-eb45b2c5cbaa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete One",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/delete/98d0ae9f-13e8-46db-bdd7-bdbd31d9a5a2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"delete",
+										"98d0ae9f-13e8-46db-bdd7-bdbd31d9a5a2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1MTk0OTksImV4cCI6MTY1NDYwNTg5OX0.w4gXyEajubb7KiEgMfdIbwwmr6VNsOmt8q5PALhT5iQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/deleteall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"deleteall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All Small",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc3OTM5NTUsImV4cCI6MTY1Nzg4MDM1NX0.ulnyFEQbFYT4bREgAui-QK7cFofxHN5ay70kH2bIG-A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/findallsmall?enable=1&role=responsible",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"findallsmall"
+									],
+									"query": [
+										{
+											"key": "enable",
+											"value": "1"
+										},
+										{
+											"key": "role",
+											"value": "responsible"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get active user numbers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY5MjI0MzksImV4cCI6MTY1NzAwODgzOX0.8LLklGIpancoj01xTa7VHyOUnh4GbGwgsOuaQnOVh90",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/user/getnbuser",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"getnbuser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc2Mjg3MzksImV4cCI6MTY1NzcxNTEzOX0.PWLvAvK9yJTggKacc9tAdXEa7nbtgwopDGWtC7OZmr0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"newpassword\":\"admin001\",\n    \"oldpassword\":\"user001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/user/updatepassword/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"updatepassword",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NmM2YjVhMC0wOGNmLTExZWQtYWE3Mi1jZjlkOWRjMTExNWUiLCJpZCI6ImE1YTJhYTQ4LTJmNmItNGUxNy1iNTFhLWE5ZmZhOTQ5NTE2OCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTgzOTIyNjYsImV4cCI6MTY1ODQ3ODY2Nn0.46VMJfkMP3LWKPn1OuNq4aiGZOLIsVlhaPX9pma-7yA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/transaction/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY2NzkwNzUsImV4cCI6MTY1Njc2NTQ3NX0.bdRAM5-SnOqwOE7M8_oEmYOWt70u89tpuiZGtAMwn2I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/transaction/get?page=0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1OTI4MzIsImV4cCI6MTY1NDY3OTIzMn0.9W13_b34dwQBT5Dg4_r3FFmFdGZQbQBlaKRaYhc4UsU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/transaction/get/75f5a49c-8741-4486-8480-ebce9e5d19a9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"get",
+										"75f5a49c-8741-4486-8480-ebce9e5d19a9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1OTI4MzIsImV4cCI6MTY1NDY3OTIzMn0.9W13_b34dwQBT5Dg4_r3FFmFdGZQbQBlaKRaYhc4UsU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"kioskid\":\"541d88ce-736b-451a-95fd-a86f22c57de8\",\n    \"amount\":703\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/transaction/update/2076ef1c-0423-4d52-bde0-de153f9e7d55",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"update",
+										"2076ef1c-0423-4d52-bde0-de153f9e7d55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete One",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRkMTFhMTJlLWFkMmYtNGJmNy04MTJiLTdmMjFmYTE3MzMwNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTQ1OTI4MzIsImV4cCI6MTY1NDY3OTIzMn0.9W13_b34dwQBT5Dg4_r3FFmFdGZQbQBlaKRaYhc4UsU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/transaction/delete/2076ef1c-0423-4d52-bde0-de153f9e7d55",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"delete",
+										"2076ef1c-0423-4d52-bde0-de153f9e7d55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get number transactions in period",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY5MjI0MzksImV4cCI6MTY1NzAwODgzOX0.8LLklGIpancoj01xTa7VHyOUnh4GbGwgsOuaQnOVh90",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/transaction/getnbtransaction?period=month",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"transaction",
+										"getnbtransaction"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "month"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Notifiction",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY2NzAyNDcsImV4cCI6MTY1Njc1NjY0N30.1dqKO0ItXM2jRJI-_86dwGclYpWr-zxLLTGJcJ6M25c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/notification/get?page0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page0",
+											"value": null
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get info notification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMDJjYTViMC0xMjQxLTExZWQtOGFiYS1lMWZmNTRjYTZkMjgiLCJpZCI6ImE1YTJhYTQ4LTJmNmItNGUxNy1iNTFhLWE5ZmZhOTQ5NTE2OCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk0MzA5NjYsImV4cCI6MTY1OTUxNzM2Nn0.Gzj3Ts0TC6wbsY_lWT6XPkfXRvepdZ0rXysX6WA4qWY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/notification/getinfo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"getinfo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Turnover",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY3MjQzODAsImV4cCI6MTY1NjgxMDc4MH0.GTskpynapvIrW8matMnm1zxJeq-i8VkalyvIzsqhzk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/turnover/get?page=0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"turnover",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fin All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTY5MjI0MzksImV4cCI6MTY1NzAwODgzOX0.8LLklGIpancoj01xTa7VHyOUnh4GbGwgsOuaQnOVh90",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/turnover/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"turnover",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Turnover",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzM2Q5ZGJkLWE5NTEtNGZkYy04ZWQxLWNmOTdjNmRhNjkxOCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTgxNTM5NTQsImV4cCI6MTY1ODI0MDM1NH0.rwaglxITZwn2ZOhN1t5GepuRQ821gYRMwICSXv5bphM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/turnover/getturnover?period=all&kioskid=ba05ab49-f65b-425d-ae11-4231cdd61047",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"turnover",
+										"getturnover"
+									],
+									"query": [
+										{
+											"key": "period",
+											"value": "all"
+										},
+										{
+											"key": "kioskid",
+											"value": "ba05ab49-f65b-425d-ae11-4231cdd61047"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cashbox",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMzYyN2MzMC0xNmZlLTExZWQtOWUwZC0xZmUxNjA1MGU1M2MiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk5NTE2NTUsImV4cCI6MTY2MDAzODA1NX0.wSvuwz2lKqZNWfgZ3JDNddb1jxM4B4CtSeK3KloM3L8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/get?page=0&size=1&kioskid=21fbf1ca-829c-46ad-bfa0-2fdc4f6a8566",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										},
+										{
+											"key": "kioskid",
+											"value": "21fbf1ca-829c-46ad-bfa0-2fdc4f6a8566"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTcwMTA0NzYsImV4cCI6MTY1NzA5Njg3Nn0.mw20X90WYmAPuILwzjaXaA9NF2_9hBIwYEcV3qnYG2U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/findall",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"findall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMzYyN2MzMC0xNmZlLTExZWQtOWUwZC0xZmUxNjA1MGU1M2MiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk5NTE2NTUsImV4cCI6MTY2MDAzODA1NX0.wSvuwz2lKqZNWfgZ3JDNddb1jxM4B4CtSeK3KloM3L8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/deleteall?kioskid=21fbf1ca-829c-46ad-bfa0-2fdc4f6a8566",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"deleteall"
+									],
+									"query": [
+										{
+											"key": "kioskid",
+											"value": "21fbf1ca-829c-46ad-bfa0-2fdc4f6a8566"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payout",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMzYyN2MzMC0xNmZlLTExZWQtOWUwZC0xZmUxNjA1MGU1M2MiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk5NTE2NTUsImV4cCI6MTY2MDAzODA1NX0.wSvuwz2lKqZNWfgZ3JDNddb1jxM4B4CtSeK3KloM3L8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/payout/findall?cashboxid=edef4971-ff24-4999-8ed3-24d5c3645976",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payout",
+										"findall"
+									],
+									"query": [
+										{
+											"key": "cashboxid",
+											"value": "edef4971-ff24-4999-8ed3-24d5c3645976"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzMzYyN2MzMC0xNmZlLTExZWQtOWUwZC0xZmUxNjA1MGU1M2MiLCJpZCI6IjA3ZjkxMGY2LTZkMTktNDNmNC1iMzkzLTFjMWZmNTU0Njk1MyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk5NTE2NTUsImV4cCI6MTY2MDAzODA1NX0.wSvuwz2lKqZNWfgZ3JDNddb1jxM4B4CtSeK3KloM3L8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/payout/deleteall?cashboxid=020de005-7aad-47db-8aa3-6c9f11734483",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"payout",
+										"deleteall"
+									],
+									"query": [
+										{
+											"key": "cashboxid",
+											"value": "020de005-7aad-47db-8aa3-6c9f11734483"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Feeding",
+					"item": [
+						{
+							"name": "Get feeding",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc1MzIxMzEsImV4cCI6MTY1NzYxODUzMX0.C47N0nkT3Zv1jToR9SXx_JRbge7WqZR2eombJVDOSig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/getfeeding?page=0&size=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"getfeeding"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get feeding details",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc1MzIxMzEsImV4cCI6MTY1NzYxODUzMX0.C47N0nkT3Zv1jToR9SXx_JRbge7WqZR2eombJVDOSig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/getfeedingdetails/87cfbe15-b4dc-4777-b0e0-bada12d8d4f0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"getfeedingdetails",
+										"87cfbe15-b4dc-4777-b0e0-bada12d8d4f0"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Close",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA1YzVhNmFhLTNmMWMtNDlkMy1hNjdiLWYxNzljZjRhNDUzNyIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTc1MzIxMzEsImV4cCI6MTY1NzYxODUzMX0.C47N0nkT3Zv1jToR9SXx_JRbge7WqZR2eombJVDOSig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cashbox/getclose?page=0&size=4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"getclose"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Panne",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMDJjYTViMC0xMjQxLTExZWQtOGFiYS1lMWZmNTRjYTZkMjgiLCJpZCI6ImE1YTJhYTQ4LTJmNmItNGUxNy1iNTFhLWE5ZmZhOTQ5NTE2OCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk0MzA5NjYsImV4cCI6MTY1OTUxNzM2Nn0.Gzj3Ts0TC6wbsY_lWT6XPkfXRvepdZ0rXysX6WA4qWY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/panne/get?page=0&size=5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"panne",
+										"get"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Info pannes",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMDJjYTViMC0xMjQxLTExZWQtOGFiYS1lMWZmNTRjYTZkMjgiLCJpZCI6ImE1YTJhYTQ4LTJmNmItNGUxNy1iNTFhLWE5ZmZhOTQ5NTE2OCIsIm5hbWUiOiJLYXJpbWEgUk9VSU4iLCJpYXQiOjE2NTk0MzA5NjYsImV4cCI6MTY1OTUxNzM2Nn0.Gzj3Ts0TC6wbsY_lWT6XPkfXRvepdZ0rXysX6WA4qWY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/panne/getinfo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"panne",
+										"getinfo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "kiosk",
+			"item": [
+				{
+					"name": "Cashbox",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyZWQyZmE4MC0xM2Y0LTExZWQtYjgwNC0wZjQ5MGI0ZjZiODQiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2MTc0OTksImV4cCI6MTY1OTcwMzg5OX0.DOVlQKpNTPN3M6w8ChnhyJW4r5mTrSSDalv7Y_gDJfM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ctype\": \"banknotes\",\n    \"kioskid\": \"eb7d6ac1-b71c-46d3-a49c-c743f99ee358\",\n    \"payoutchannels\": [\n        {\n            \"actualnumber\": 0,\n            \"alert\": 15,\n            \"number\": 0,\n            \"currency\": \"TND\",\n            \"money\": 5\n        },\n        {\n            \"actualnumber\": 0,\n            \"alert\": 25,\n            \"number\": 0,\n            \"currency\": \"TND\",\n            \"money\": 10\n        },\n        {\n            \"actualnumber\": 0,\n            \"alert\": 15,\n            \"number\": 0,\n            \"currency\": \"TND\",\n            \"money\": 20\n        },\n        {\n            \"actualnumber\": 0,\n            \"alert\": 0,\n            \"number\": 0,\n            \"currency\": \"TND\",\n            \"money\": 50\n        }\n    ],\n    \"stock\": 0,\n    \"stockm\": 0,\n    \"stockh\": 0,\n    \"stockn\": 0,\n    \"stockg\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/cashbox/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "feeding",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyZWQyZmE4MC0xM2Y0LTExZWQtYjgwNC0wZjQ5MGI0ZjZiODQiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2MTc0OTksImV4cCI6MTY1OTcwMzg5OX0.DOVlQKpNTPN3M6w8ChnhyJW4r5mTrSSDalv7Y_gDJfM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ftype\":\"responsable\",\n    \"amount\":175,\n    \"datekiosk\":\"2022-06-13T13:53:52.905Z\",\n    \"cashboxid\":\"248ac342-3f65-4917-a5de-103e7ef43ab0\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/cashbox/feeding",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"feeding"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "feedingdetail",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyZWQyZmE4MC0xM2Y0LTExZWQtYjgwNC0wZjQ5MGI0ZjZiODQiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2MTc0OTksImV4cCI6MTY1OTcwMzg5OX0.DOVlQKpNTPN3M6w8ChnhyJW4r5mTrSSDalv7Y_gDJfM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"diffrencekiosk\":0,\n    \"money\":10,\n    \"oldnumber\":0,\n    \"newnumber\":3,\n    \"feedingid\":\"3cdac59d-3486-4136-8923-0657bfdb8b6f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/cashbox/feedingdetail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"feedingdetail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Stock",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyZWQyZmE4MC0xM2Y0LTExZWQtYjgwNC0wZjQ5MGI0ZjZiODQiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2MTc0OTksImV4cCI6MTY1OTcwMzg5OX0.DOVlQKpNTPN3M6w8ChnhyJW4r5mTrSSDalv7Y_gDJfM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"stype\": \"responsable\",\n    \"source\": \"banknotes\",\n    \"amount\": 175,\n    \"datekiosk\": \"2022-06-13T13:53:52.905Z\",\n   \"cashboxid\":\"248ac342-3f65-4917-a5de-103e7ef43ab0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/cashbox/stock",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"stock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "close",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmU5ZThiLTc5ZTEtNDkxOC1hMWIxLWRmZjE4N2Q3MTdjNCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTgxNDIwNjAsImV4cCI6MTY1ODIyODQ2MH0.nwOVxtAX9td0yAOMN99AHCwgEUbPUGvvTf5cZx91qEQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cltype\":\"monnayeur\",\n    \"stockkiosk\":\"122\",\n    \"stockphysique\":\"122\",\n    \"datekiosk\":\"2022-06-13T13:53:52.905Z\",\n    \"cashboxid\":\"903b20da-124e-4419-94e7-a6789e10b5bd\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/cashbox/close",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cashbox",
+										"close"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "topnet",
+					"item": [
+						{
+							"name": "get factures",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY4ZjYzMjdiLTkwYWUtNDkyZC1hMGY1LTYzNjhkZDlmMTAyMSIsIm5hbWUiOiJDYXNoT3V0IiwiaWF0IjoxNjU3MDk5MjI3LCJleHAiOjE2NTcxODU2Mjd9.OUhLD77SEhu1YmfOE1d7qgdEH5OfaDepLx9xN3hmYqk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/topnet/getfactures?libellecontrat=71530018",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"topnet",
+										"getfactures"
+									],
+									"query": [
+										{
+											"key": "libellecontrat",
+											"value": "71530018"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Helloword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ3OTAwMzI4LWY2MzItNDRkNi1iN2Y2LWRkZWVjMzM2Zjc5MCIsIm5hbWUiOiJjYXNob3V0IiwiaWF0IjoxNjU1ODAyNjgxLCJleHAiOjE2NTU4ODkwODF9.K1VBnDJHqJredSkjOBxC1JlTPqaZxY7wM0ATU9yB8eY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8282/api/topnet/helloword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8282",
+									"path": [
+										"api",
+										"topnet",
+										"helloword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmU5ZThiLTc5ZTEtNDkxOC1hMWIxLWRmZjE4N2Q3MTdjNCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTgxNTM5NTksImV4cCI6MTY1ODI0MDM1OX0.9ALGYQ18omrzQnaa-9kUlO5TJTaRpyOYGHwTuqpjWA4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"codeclient\": \"P-2009-035760\",\n  \"idtransaction\": 105054560,\n  \"montant\": 80.529,\n \"kioskid\":\"656e9e8b-79e1-4918-a1b1-dff187d717c4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/topnet/payment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"topnet",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "panne",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmNjQwMmMzMC0xNGFhLTExZWQtYWI1Yy0xNTMyZDMwNzI4MzEiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2OTYwMDIsImV4cCI6MTY1OTc4MjQwMn0.AQ5IMbuZvYAMDzPQcQCLeWIIH_nWmYrewJJkMlKa9ks",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"p001\",\n    \"title\": \"hdzdhjazdhj hd\",\n    \"description\": \"testestegddjsdjb\",\n    \"details\": \"testeestest\",\n    \"deviceid\": \"2bdbd725-62f1-42bb-b742-90ca48b4274f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/panne/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"panne",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "correction",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY4ZjYzMjdiLTkwYWUtNDkyZC1hMGY1LTYzNjhkZDlmMTAyMSIsIm5hbWUiOiJDYXNoT3V0IiwiaWF0IjoxNjU3Njk4MjczLCJleHAiOjE2NTc3ODQ2NzN9.t9L6uUd6kNAXybu4abLfNzUSZqaoJjBk3xFsBz2QuhM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/panne/correction/ac0b9ff2-7539-4093-878d-a32c7d11dc79",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"panne",
+										"correction",
+										"ac0b9ff2-7539-4093-878d-a32c7d11dc79"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Notifications",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmNjQwMmMzMC0xNGFhLTExZWQtYWI1Yy0xNTMyZDMwNzI4MzEiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2OTYwMDIsImV4cCI6MTY1OTc4MjQwMn0.AQ5IMbuZvYAMDzPQcQCLeWIIH_nWmYrewJJkMlKa9ks",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"p001\",\n    \"title\": \"test\",\n    \"description\": \"azertydfg\",\n    \"details\": \"testbbbb\",\n     \"ntype\":\"info\",\n    \"kioskid\": \"eb7d6ac1-b71c-46d3-a49c-c743f99ee358\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/notification/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Kiosk",
+					"item": [
+						{
+							"name": "Init",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyZWQyZmE4MC0xM2Y0LTExZWQtYjgwNC0wZjQ5MGI0ZjZiODQiLCJpZCI6ImViN2Q2YWMxLWI3MWMtNDZkMy1hNDljLWM3NDNmOTllZTM1OCIsIm5hbWUiOiJQYXlQYXkiLCJpYXQiOjE2NTk2MTc0OTksImV4cCI6MTY1OTcwMzg5OX0.DOVlQKpNTPN3M6w8ChnhyJW4r5mTrSSDalv7Y_gDJfM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/kiosk/init",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"init"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY4ZjYzMjdiLTkwYWUtNDkyZC1hMGY1LTYzNjhkZDlmMTAyMSIsIm5hbWUiOiJDYXNoT3V0IiwiaWF0IjoxNjU3NzkzODg2LCJleHAiOjE2NTc4ODAyODZ9.BDjacvst7pmm1KjLfOHK2UFzTsp-tA2PwgQLedsNK0Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"broken\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/kiosk/updatestatus/f8f6327b-90ae-492d-a0f5-6368dd9f1021",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"kiosk",
+										"updatestatus",
+										"f8f6327b-90ae-492d-a0f5-6368dd9f1021"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://api-monitoring-topnet.paypos.tn"
+		}
+	]
+}

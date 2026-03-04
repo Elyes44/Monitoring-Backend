@@ -1,0 +1,97 @@
+[2025-06-13T08:59:03.854] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T09:04:44.939] [DEBUG] debug - signin kiosk body={"username":"borne","password":"123456"}; query= [object Object]; params=[object Object]
+[2025-06-13T09:05:20.555] [DEBUG] debug - init kiosk body={}; query= [object Object]; params=[object Object]; decoded=[object Object]
+[2025-06-13T09:31:36.735] [DEBUG] debug - close Cashbox body={"cltype":"monnayeur","stockkiosk":"10","stockphysique":"15","datekiosk":"2025-6-13","cashboxid":"4a13ab97-6068-4bf9-8a80-9ad70c307f77"}; query= {}; params={}; decoded={"decoded":{"jti":"115e8260-482d-11f0-a4b8-4dccbbaaabec","id":"f1f9d2b5-63d9-410d-b34d-56491ba55866","name":"borne","iat":1749801885,"exp":1749888285}}
+[2025-06-13T09:32:51.977] [DEBUG] debug - close Cashbox body={"cltype":"monnayeur","stockkiosk":"15","stockphysique":"55","datekiosk":"2025-6-13","cashboxid":"4a13ab97-6068-4bf9-8a80-9ad70c307f77"}; query= {}; params={}; decoded={"decoded":{"jti":"115e8260-482d-11f0-a4b8-4dccbbaaabec","id":"f1f9d2b5-63d9-410d-b34d-56491ba55866","name":"borne","iat":1749801885,"exp":1749888285}}
+[2025-06-13T09:33:24.186] [DEBUG] debug - close Cashbox body={"cltype":"monnayeur","stockkiosk":"15","stockphysique":"55","datekiosk":"2025-6-13","cashboxid":"4a13ab97-6068-4bf9-8a80-9ad70c307f77"}; query= {}; params={}; decoded={"decoded":{"jti":"115e8260-482d-11f0-a4b8-4dccbbaaabec","id":"f1f9d2b5-63d9-410d-b34d-56491ba55866","name":"borne","iat":1749801885,"exp":1749888285}}
+[2025-06-13T09:36:07.186] [DEBUG] debug - close Cashbox body={"cltype":"banknotes","stockkiosk":"15","stockphysique":"55","datekiosk":"2025-6-13","cashboxid":"c2c2a172-e153-41b2-8533-0f27465ff03a"}; query= {}; params={}; decoded={"decoded":{"jti":"115e8260-482d-11f0-a4b8-4dccbbaaabec","id":"f1f9d2b5-63d9-410d-b34d-56491ba55866","name":"borne","iat":1749801885,"exp":1749888285}}
+[2025-06-13T12:47:44.365] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T12:48:14.197] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T15:47:40.708] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T15:56:23.643] [DEBUG] debug - signin kiosk body={"username":"borne MAE","password":"borne MAE"}; query= [object Object]; params=[object Object]
+[2025-06-13T15:57:08.510] [DEBUG] debug - signin kiosk body={"username":"borneuser","password":"borneuser"}; query= [object Object]; params=[object Object]
+[2025-06-13T15:59:38.324] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:00:18.591] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:09:34.093] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:09:36.636] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:09:53.379] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:09:54.824] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:09:56.590] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:09:57.305] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:10:09.914] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:10:15.530] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"adcd91c0-4866-11f0-8fd4-53de712012d3","id":"73992e8e-d672-4f97-b1b8-e08c6327611e","name":"borne MAE","iat":1749826628,"exp":1749913028}}
+[2025-06-13T16:14:15.922] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:14:47.487] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:15:06.651] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:16:22.208] [DEBUG] debug - signin kiosk body={"username":"borneuser","password":"borneuser"}; query= [object Object]; params=[object Object]
+[2025-06-13T16:16:29.258] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:18:01.471] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:18:05.697] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:19:25.017] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:19:26.509] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:19:27.630] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:20:56.666] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:21:02.235] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:22:37.774] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:22:41.078] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:23:01.700] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:24:07.303] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:24:08.258] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:24:12.875] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:24:36.896] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:24:39.798] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:24:40.727] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:28:11.727] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:28:25.222] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:30:14.473] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:30:15.532] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:30:38.584] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:30:39.665] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:30:52.745] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:30:53.848] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:30:55.274] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:32:11.360] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:32:12.501] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:32:14.057] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:32:49.403] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:32:58.159] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:32:59.033] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:33:39.018] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:33:41.907] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:34:52.751] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:34:54.331] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:34:56.883] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:35:29.922] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:35:30.886] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:48:30.194] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:48:58.665] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:49:50.640] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:49:51.904] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:50:26.848] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:50:28.199] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:50:50.739] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:50:51.595] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:52:05.336] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:52:06.369] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:52:18.873] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:52:19.691] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:53:37.579] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:53:41.462] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:53:45.503] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:54:06.699] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:54:09.492] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":12,"stockm":22}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:57:24.761] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13,"stockm":23}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:57:44.272] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:57:53.108] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13,"stockm":23}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:59:04.632] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T16:59:07.004] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:59:09.216] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T16:59:21.058] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T17:03:30.458] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T17:03:34.381] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T17:03:39.455] [DEBUG] debug - create Cashbox body={"stockn":10,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T17:03:44.182] [DEBUG] debug - create Cashbox body={"stockn":22,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T17:04:15.330] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T17:04:18.693] [DEBUG] debug - create Cashbox body={"stockn":22,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
+[2025-06-13T17:04:50.658] [DEBUG] debug - Server monitoring is running on port 5566.
+[2025-06-13T17:04:59.723] [DEBUG] debug - create Cashbox body={"stockn":22,"stockh":13}; query= {}; params={}; decoded={"decoded":{"jti":"5d4a4600-4869-11f0-9788-cf5d79c8912e","id":"1fe5b1d0-8d7a-4a77-b0be-b0e76ad2702a","name":"borneuser","iat":1749827782,"exp":1749914182}}
