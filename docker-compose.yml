@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: monitoring_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: HAZEM
+      POSTGRES_DB: chuMonitoring
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - monitoring_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Node.js Application
+  app:
+    image: mintoring-paypos:1.0
+    container_name: monitoring_app
+    ports:
+      - "5566:5566"
+    environment:
+      NODE_ENV: production
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: chuMonitoring
+      DB_USER: postgres
+      DB_PASSWORD: HAZEM
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - monitoring_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  monitoring_network:
+    driver: bridge
