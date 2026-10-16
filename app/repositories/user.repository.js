@@ -33,7 +33,6 @@ exports.create = async req => {
       roles: req.body.roles,
       createdBy: req.decoded.decoded.id
     }
-    console.log(var_user)
     const data = await Users.create(var_user).catch(err => {
       log4j.loggerinfo.error(
         err.errors[0].message + ' ==> ' + err.errors[0].instance
@@ -110,9 +109,7 @@ exports.findOne = async id => {
 
 // Update a User by the id in the request
 exports.update = async (var_user, id, oldpassword) => {
-  console.log(var_user)
   console.log(id)
-  console.log(oldpassword)
   const data = await Users.findByPk(id).catch(err => {
     log4j.loggerinfo.error(err.message + ' ==> ' + err.parent.detail)
 

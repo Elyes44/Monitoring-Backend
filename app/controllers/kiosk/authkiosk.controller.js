@@ -6,15 +6,7 @@ var uuid = require('uuid')
 var jwt = require('jsonwebtoken')
 const log4j = require('../../config/configLog4js.js')
 exports.signin = (req, res) => {
-  console.log(req.body)
-  log4j.loggerdebug.debug(
-    `signin kiosk body=` +
-      JSON.stringify(req.body) +
-      '; query= ' +
-      req.query +
-      '; params=' +
-      req.params
-  )
+  log4j.loggerdebug.debug('signin kiosk')
   Kiosks.findOne({
     where: {
       username: req.body.username,
