@@ -152,7 +152,6 @@ let isAdminAndResponsible = (req, res, next) => {
 let forAll = (req, res, next) => {
   console.log(JSON.stringify(req.decoded.decoded))
   Users.findByPk(req.decoded.decoded.id).then(user => {
-    console.log(JSON.stringify(user))
     if (user) {
       for (let i = 0; i < user.roles.length; i++) {
         if (

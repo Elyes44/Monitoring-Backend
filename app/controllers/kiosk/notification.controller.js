@@ -18,7 +18,6 @@ exports.create = async (req, res) => {
     console.log(req.body.kioskid)
     const kiosk = await kioskrepository.findOne(req.body.kioskid)
     if (kiosk != undefined && kiosk != null) {
-      console.log(kiosk)
       console.log(req.decoded.decoded.id)
       if (kiosk.id == req.decoded.decoded.id) {
         const nt = await notificationrepository.create(req)

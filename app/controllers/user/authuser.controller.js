@@ -8,7 +8,6 @@ var bcrypt = require('bcryptjs')
 var jwt = require('jsonwebtoken')
 
 exports.signin = async (req, res) => {
-  console.log(req.body)
   Users.findOne({
     where: {
       username: req.body.username,

@@ -40,7 +40,6 @@ const schemafind = yup.object({
 
 exports.create = () => async (req, res, next) => {
   try {
-    console.log(req.headers['authorization']);
     
     await schemacreate.validate({
       body: req.body,

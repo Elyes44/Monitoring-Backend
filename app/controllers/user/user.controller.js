@@ -321,7 +321,6 @@ exports.updatepassword = async (req, res) => {
       updatedBy: req.decoded.decoded.id,
       updatedAt: Date.now
     }
-    console.log(var_user)
     var num = await userrepository.update(
       var_user,
       req.decoded.decoded.id,

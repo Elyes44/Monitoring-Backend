@@ -97,7 +97,6 @@ const schemaeditpwt = yup.object({
 })
 exports.create = () => async (req, res, next) => {
   try {
-    console.log(req.body)
     await schemacreate.validate({
       body: req.body,
       query: req.query,
@@ -137,7 +136,6 @@ exports.find = () => async (req, res, next) => {
 }
 exports.editpwt = () => async (req, res, next) => {
   try {
-    console.log(req.body)
     await schemaeditpwt.validate({
       body: req.body,
       query: req.query,
